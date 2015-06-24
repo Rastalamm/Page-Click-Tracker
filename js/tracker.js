@@ -2,11 +2,12 @@ window.onload = function(){
 
 
 var totalClickList = {};
+var count =0;
 
   var elementTracker = (function (event){
     window.addEventListener('click', function(event){
 
-
+      count++;
 
       var elementClicked = event.target.nodeName;
       var classNameClicked = event.target.className;
@@ -30,7 +31,7 @@ var totalClickList = {};
       }
       console.log(event);
       console.log(totalClickList);
-      displayBox.innerHTML += 32423;
+      displayBox.innerHTML = count;
 
     })
   })();
