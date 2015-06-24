@@ -5,10 +5,9 @@ var totalClickList = {};
 
   var elementTracker = (function (event){
     window.addEventListener('click', function(event){
-    var displayBox = document.createElement('div');
-    displayBox.setAttribute('id', 'display-box');
-    displayBox.style.background = 'blue';
-    window.document.insertBefore(displayBox, window.document.body);
+
+
+
       var elementClicked = event.target.nodeName;
       var classNameClicked = event.target.className;
       var idNameClicked = event.target.id;
@@ -31,15 +30,19 @@ var totalClickList = {};
       }
       console.log(event);
       console.log(totalClickList);
+      displayBox.innerHTML += 32423;
+
     })
   })();
 
-  var displayClickedList = function(){
-    var displayBox = document.createElement('div');
+  var displayBox = document.createElement('div');
+
+  var displayClickedList = (function(){
+
     displayBox.setAttribute('id', 'display-box');
-    displayBox.style.background = 'blue';
-    window.document.insertBefore(displayBox, window.document.body.header);
-  }
+    window.document.body.appendChild(displayBox);
+
+  })();
 
 
 
